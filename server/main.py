@@ -14,20 +14,22 @@ math_put_args.add_argument("h", type=float, help="for h variable")
 
 x = Symbol('x')
 
-class Test1(Resource):
+
+class FirstAssignment(Resource):
     def post(self):
-        
-        def expression():            
+        def expression():
             return x**2**x
-        def takeFirstDerivities():            
+
+        def takeFirstDerivities():
             f = expression()
             return f.diff(x)
-        def calculateFirstDerivities(x_value):    
+
+        def calculateFirstDerivities(x_value):
             return float(takeFirstDerivities().subs(x, x_value))
         return {"value": calculateFirstDerivities(math_put_args.parse_args().x)}
-api.add_resource(Test1, "/")
 
 
+api.add_resource(FirstAssignment, "/first_assignment")
 
 if __name__ == "__main__":
     app.run(debug=True)
