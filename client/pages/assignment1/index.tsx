@@ -1,6 +1,17 @@
 /* UI */
 import { Container } from "reactstrap";
-import { ListGroup, ListGroupItem, Input, Button, Row, Col } from "reactstrap";
+import {
+  ListGroup,
+  ListGroupItem,
+  Input,
+  Button,
+  Row,
+  Col,
+  Badge,
+  Spinner,
+} from "reactstrap";
+/* imports */
+import axios from "../../axios";
 
 const Assigment1 = () => {
   return (
@@ -23,7 +34,7 @@ const Assigment1 = () => {
                 </ListGroupItem>
               </Col>
             </Row>
-            <ListGroupItem style={{marginTop: 18}} >
+            <ListGroupItem style={{ marginTop: 18 }}>
               <Button style={{ width: "100%" }} color="primary">
                 Calculate
               </Button>
@@ -31,7 +42,27 @@ const Assigment1 = () => {
           </ListGroupItem>
           <ListGroupItem>
             <p>Results:</p>
-            <Input></Input>
+            <p>
+              3-point Procedure: <Badge color="primary">10.3123</Badge>
+            </p>
+            <p>
+              4-point Procedure (A) : <Badge color="primary">10.3123</Badge>
+            </p>
+            <p>
+              4-point Procedure (B) : <Badge color="primary">10.3123</Badge>
+            </p>
+            <p>
+              5-point Procedure (A) : <Badge color="primary">10.3123</Badge>
+            </p>
+            <p>
+              5-point Procedure (B) : <Badge color="primary">10.3123</Badge>
+            </p>
+            <p>
+              5-point Procedure (C) : <Badge color="primary">10.3123</Badge>
+            </p>
+            <p>
+              2nd Deriv. Procedures : <Badge color="primary">10.3123</Badge>
+            </p>
           </ListGroupItem>
         </ListGroup>
       </Container>
