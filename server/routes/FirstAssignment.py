@@ -55,5 +55,5 @@ class FirstAssignment(Resource):
 
     def post(self):
         print(type(math_put_args.parse_args().x0))
-        return {"3-point-procedure": self.calculateExpressions._3_point_procedure(), "4_point_procedure_a": self.calculateExpressions._4_point_procedure_a(),
+        return {"3_point_procedure": self.calculateExpressions._3_point_procedure(), "4_point_procedure_a": self.calculateExpressions._4_point_procedure_a(),
                 "4_point_procedure_b": self.calculateExpressions._4_point_procedure_b(), "5_point_procedure_a": self.calculateExpressions._5_point_procedure_a(), "5_point_procedure_b": self.calculateExpressions._5_point_procedure_b(), "5_point_procedure_c": self.calculateExpressions._5_point_procedure_c(), "2nd_deriv_procedure": self.calculateExpressions._2nd_deriv_procedure()}
