@@ -25,11 +25,22 @@ const Header = () => {
                 onClick={() => {
                   router.push("/assignment1");
                 }}
-                color="primary"
+                color={
+                  router.pathname === "/assignment1" ? "primary" : "secondary"
+                }
               >
                 assignment_1
               </Button>,
-              <Button>assignment_2</Button>,
+              <Button
+                onClick={() => {
+                  router.push("/assignment2");
+                }}
+                color={
+                  router.pathname === "/assignment2" ? "primary" : "secondary"
+                }
+              >
+                assignment_2
+              </Button>,
               <Button>assignment_3</Button>,
               <Button>assignment_4</Button>,
               <Button>assignment_5</Button>,
